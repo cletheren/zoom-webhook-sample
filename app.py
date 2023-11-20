@@ -14,7 +14,7 @@ webhook_token = os.getenv("WEBHOOK_TOKEN")
 
 def source_is_zoom() -> bool:
     """Validate that Zoom is the source of the webhook
-    https://developers.zoom.us/docs/api/rest/webhook-reference/#validate-your-webhook-endpoint
+    https://developers.zoom.us/docs/api/rest/webhook-reference/#verify-with-zooms-header
     """
     payload = request.get_data()
     timestamp = request.headers.get("X-Zm-Request-Timestamp")
