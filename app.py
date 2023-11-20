@@ -41,7 +41,7 @@ def endpoint_validation() -> dict[str, str]:
 
 
 @app.route("/webhook", methods=["POST"])
-def contact_center():
+def webhook():
     payload = request.get_json()
 
     if not source_is_zoom():
